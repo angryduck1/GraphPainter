@@ -33,7 +33,6 @@ public:
     }
 
     void set_point(int i, int x, int y) {
-        i--;
         if (i >= 0 && i < count_points) {
             points[i][0] = x;
             points[i][1] = y;
@@ -77,17 +76,17 @@ public:
 };
 
 int main() {
-    Graph graph("Test", 12, 12, 7); // Создаём график. 1 параметр - name; 2 - x; 3 - y; 4 - Количество меток(point).
-
+    Graph graph("Parabola", 12, 12, 7); // Создаём график. 1 параметр - name; 2 - x; 3 - y; 4 - Количество меток(point).
+    int index = 0;
     //Пример параболы
 
-    graph.set_point(1, -3, 9); // Установка координат точек. 1 - Номер точки; 2 - x; 3 - y.
-    graph.set_point(2, -2, 4);
-    graph.set_point(3, -1, 1);
-    graph.set_point(4, 0, 0);
-    graph.set_point(5, 1, 1);
-    graph.set_point(6, 2, 4);
-    graph.set_point(7, 3, 9);
+    graph.set_point(index++, -3, 9); // Установка координат точек. 1 - Номер точки; 2 - x; 3 - y.
+    graph.set_point(index++, -2, 4);
+    graph.set_point(index++, -1, 1);
+    graph.set_point(index++, 0, 0);
+    graph.set_point(index++, 1, 1);
+    graph.set_point(index++, 2, 4);
+    graph.set_point(index++, 3, 9);
 
     graph.paint_graph();
 
